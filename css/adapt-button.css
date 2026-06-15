@@ -1,0 +1,74 @@
+/* ══════════════════════════════════════
+   TOP RIGHT CONTROLS (Volumen y Adaptar)
+   ══════════════════════════════════════ */
+
+.top-right-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 8;
+  display: flex;
+  gap: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--ease);
+}
+
+.player-container.show-ui .top-right-controls,
+.player-container:hover .top-right-controls {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.adapt-btn {
+  background: var(--bg-card);
+  border: none;
+  border-radius: 50%;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--ease);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+.adapt-btn:hover {
+  background: var(--bg-hover);
+  color: var(--green);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.adapt-btn:active {
+  transform: scale(0.95);
+}
+
+.adapt-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .top-right-controls {
+    top: 16px;
+    right: 16px;
+    gap: 10px;
+  }
+  
+  .adapt-btn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .adapt-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+}

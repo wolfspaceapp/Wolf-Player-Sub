@@ -1,0 +1,36 @@
+/* ══════════════════════════════════════
+   GRADIENTS
+   ══════════════════════════════════════ */
+
+.gradient-top {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.7) 50%, transparent 100%);
+  pointer-events: none; 
+  z-index: 4;
+  opacity: 0; 
+  transition: opacity var(--ease);
+}
+
+.gradient-bottom {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 180px;
+  background: linear-gradient(0deg, rgba(10,10,10,0.98) 0%, rgba(10,10,10,0.85) 40%, transparent 100%);
+  pointer-events: none; 
+  z-index: 4;
+  opacity: 0; 
+  transition: opacity var(--ease);
+}
+
+.gradient-right {
+  display: none;
+}
+
+.player-container.show-ui .gradient-top,
+.player-container.show-ui .gradient-bottom,
+.player-container:hover .gradient-top,
+.player-container:hover .gradient-bottom { 
+  opacity: 1; 
+}

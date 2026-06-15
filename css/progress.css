@@ -1,0 +1,77 @@
+/* ══════════════════════════════════════
+   PROGRESS BAR
+   ══════════════════════════════════════ */
+
+.progress-wrap {
+  position: relative;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: height 0.15s;
+}
+
+.progress-wrap:hover { 
+  height: 6px; 
+}
+
+.progress-buffered {
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  height: 100%;
+  background: rgba(255,255,255,0.15);
+  border-radius: 2px; 
+  pointer-events: none; 
+  width: 0;
+}
+
+.progress-fill {
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  height: 100%;
+  background: var(--green);
+  border-radius: 2px; 
+  pointer-events: none; 
+  width: 0;
+  box-shadow: 0 0 8px rgba(0,230,118,0.3);
+}
+
+.progress-thumb {
+  position: absolute; 
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 14px; 
+  height: 14px;
+  background: var(--green); 
+  border-radius: 50%;
+  pointer-events: none; 
+  transition: transform 0.15s;
+  box-shadow: 0 0 0 4px rgba(0,230,118,0.2);
+}
+
+.progress-wrap:hover .progress-thumb { 
+  transform: translate(-50%, -50%) scale(1); 
+}
+
+.progress-tooltip {
+  position: absolute; 
+  bottom: 18px;
+  background: var(--bg-card); 
+  color: var(--text);
+  font-size: 12px; 
+  font-weight: 600;
+  padding: 6px 12px; 
+  border-radius: 6px;
+  pointer-events: none; 
+  white-space: nowrap;
+  transform: translateX(-50%); 
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.progress-wrap:hover .progress-tooltip { 
+  display: block; 
+}

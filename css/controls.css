@@ -1,0 +1,49 @@
+/* ══════════════════════════════════════
+   BOTTOM CONTROLS
+   ══════════════════════════════════════ */
+
+.controls {
+  position: absolute;
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  padding: 0 24px 24px;
+  z-index: 7;
+  opacity: 0; 
+  transform: translateY(10px);
+  transition: opacity var(--ease), transform var(--ease);
+}
+
+.player-container.show-ui .controls,
+.player-container:hover .controls {
+  opacity: 1; 
+  transform: translateY(0);
+}
+
+.ctrl-row { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  flex-wrap: nowrap; 
+}
+
+.time-display {
+  font-size: 14px; 
+  color: var(--text);
+  white-space: nowrap; 
+  user-select: none;
+  font-variant-numeric: tabular-nums; 
+  padding: 0;
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  font-weight: 500;
+  background: var(--bg-card);
+  padding: 8px 14px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.spacer { 
+  flex: 1; 
+}

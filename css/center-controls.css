@@ -1,0 +1,109 @@
+/* ══════════════════════════════════════
+   CENTER CONTROLS
+   ══════════════════════════════════════ */
+
+.center-controls {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex; 
+  align-items: center; 
+  gap: 60px;
+  z-index: 7;
+  opacity: 0; 
+  transition: opacity var(--ease);
+  pointer-events: none;
+}
+
+.player-container.show-ui .center-controls,
+.player-container:hover .center-controls {
+  opacity: 1; 
+  pointer-events: auto;
+}
+
+.cc-btn {
+  width: 80px; 
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(20,20,20,0.9);
+  border: 2px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all var(--ease);
+  color: var(--text);
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  gap: 2px;
+}
+
+.cc-btn svg { 
+  width: 32px; 
+  height: 32px; 
+  fill: currentColor; 
+  display: block;
+}
+
+.cc-btn .skip-text {
+  font-size: 12px;
+  font-weight: 700;
+  color: currentColor;
+  line-height: 1;
+}
+
+.cc-btn:hover { 
+  border-color: var(--green);
+  background: rgba(0,230,118,0.2);
+  color: var(--green);
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(0,230,118,0.3);
+}
+
+.cc-btn:active { 
+  transform: scale(0.95); 
+}
+
+.cc-play {
+  width: 100px; 
+  height: 100px;
+  background: var(--green);
+  border: none;
+  border-radius: 50%;
+  color: var(--bg-dark);
+  box-shadow: 0 6px 30px rgba(0,230,118,0.4);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: all var(--ease);
+  gap: 0;
+}
+
+.cc-play .skip-text {
+  display: none;
+}
+
+.cc-play svg { 
+  width: 48px; 
+  height: 48px; 
+  fill: var(--bg-dark); 
+  display: block;
+  margin-left: 4px;
+}
+
+.cc-play:hover { 
+  background: var(--green-hover);
+  transform: scale(1.08);
+  box-shadow: 0 8px 40px rgba(0,230,118,0.6);
+}
+
+.cc-play:active { 
+  transform: scale(0.96); 
+}

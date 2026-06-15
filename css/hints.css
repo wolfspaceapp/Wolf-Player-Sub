@@ -1,0 +1,27 @@
+/* ══════════════════════════════════════
+   KEYBOARD HINTS
+   ══════════════════════════════════════ */
+
+.kbd-hint {
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-card);
+  color: var(--green); 
+  font-size: 14px; 
+  font-weight: 600;
+  padding: 12px 24px; 
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  pointer-events: none; 
+  opacity: 0; 
+  z-index: 12;
+  transition: opacity 0.2s; 
+  white-space: nowrap;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+
+.kbd-hint.show { 
+  opacity: 1; 
+}

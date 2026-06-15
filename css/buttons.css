@@ -1,0 +1,36 @@
+/* ══════════════════════════════════════
+   BUTTONS BASE
+   ══════════════════════════════════════ */
+
+.ctrl-btn {
+  background: var(--bg-card); 
+  border: none; 
+  color: var(--text);
+  cursor: pointer; 
+  padding: 10px; 
+  border-radius: 8px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  transition: background var(--ease), transform 0.1s, color var(--ease);
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  min-width: 44px; 
+  min-height: 44px;
+}
+
+.ctrl-btn:hover { 
+  background: var(--bg-hover); 
+  color: var(--green); 
+}
+
+.ctrl-btn:active { 
+  transform: scale(0.92); 
+}
+
+.ctrl-btn svg { 
+  width: 24px; 
+  height: 24px; 
+  fill: currentColor; 
+  display: block; 
+}

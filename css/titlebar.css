@@ -1,0 +1,46 @@
+/* ══════════════════════════════════════
+   TITLE BAR
+   ══════════════════════════════════════ */
+
+.title-bar {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  padding: 20px 24px;
+  z-index: 7;
+  display: flex; 
+  align-items: center; 
+  gap: 12px;
+  opacity: 0; 
+  transition: opacity var(--ease);
+  pointer-events: none;
+}
+
+.player-container.show-ui .title-bar,
+.player-container:hover .title-bar {
+  opacity: 1; 
+  pointer-events: auto;
+}
+
+.title-bar span {
+  flex: 1; 
+  color: var(--text); 
+  font-size: 16px; 
+  font-weight: 600;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+.tb-right { 
+  display: flex; 
+  gap: 8px; 
+  flex-shrink: 0; 
+  margin-left: auto; 
+}
+
+.tb-back {
+  background: var(--bg-card);
+  border-radius: 8px;
+}

@@ -1,0 +1,71 @@
+/* ══════════════════════════════════════
+   MENUS
+   ══════════════════════════════════════ */
+
+.menu-wrap { 
+  position: relative; 
+}
+
+.menu-popup {
+  position: absolute;
+  bottom: calc(100% + 12px); 
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px; 
+  min-width: 160px;
+  overflow: hidden; 
+  display: none; 
+  z-index: 20;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  animation: menu-in 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes menu-in {
+  from { 
+    opacity: 0; 
+    transform: translateY(8px) scale(0.96); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  }
+}
+
+.menu-popup.open { 
+  display: block; 
+}
+
+.menu-popup button {
+  display: block; 
+  width: 100%; 
+  background: none; 
+  border: none;
+  color: var(--text-dim); 
+  padding: 12px 18px; 
+  text-align: left;
+  font-size: 14px; 
+  cursor: pointer; 
+  transition: all 0.15s;
+  font-weight: 500;
+}
+
+.menu-popup button:hover { 
+  background: var(--bg-hover); 
+  color: var(--green); 
+}
+
+.menu-popup button.active { 
+  color: var(--green); 
+  font-weight: 600; 
+  background: rgba(0,230,118,0.1);
+}
+
+.menu-label {
+  font-size: 11px; 
+  color: rgba(255,255,255,0.4);
+  padding: 14px 18px 8px;
+  text-transform: uppercase; 
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
