@@ -18,7 +18,6 @@ import { loadSource } from './loaders.js';
 import { rebindQualityAuto } from './quality.js';
 import { initExtraButtons } from './extra-buttons.js';
 import { initBrightness } from './brightness.js';
-import { initSubtitles } from './subtitles.js';
 
 (function () {
   'use strict';
@@ -38,7 +37,6 @@ import { initSubtitles } from './subtitles.js';
   initKeyboard();
   initExtraButtons();
   initBrightness();
-  initSubtitles();
 
   // Load video from URL parameter
   const autoSrc = new URLSearchParams(location.search).get('src');

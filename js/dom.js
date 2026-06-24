@@ -54,7 +54,3 @@ export const fsLabel      = document.getElementById('fsLabel');
 export const btnLock      = document.getElementById('btnLock');
 export const btnEpisodes  = document.getElementById('btnEpisodes');
 export const btnNextEp    = document.getElementById('btnNextEp');
-
-export const btnSubtitles = document.getElementById('btnSubtitles');
-export const subtitlesMenu = document.getElementById('subtitlesMenu');
-export const subtitlesDisplay = document.getElementById('subtitlesDisplay');
