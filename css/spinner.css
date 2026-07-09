@@ -16,6 +16,13 @@
   display: flex; 
 }
 
+/* Ocultar botones centrales mientras el spinner está activo */
+.spinner.active ~ .center-controls,
+.player-container:has(.spinner.active) .center-controls {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 .spinner svg { 
   animation: spin 0.8s linear infinite; 
 }
